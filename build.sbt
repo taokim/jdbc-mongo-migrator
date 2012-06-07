@@ -11,8 +11,7 @@ resolvers <<= (resolvers) { r =>
         r ++ Seq(
             "scala-tools" at "http://scala-tools.org/repo-releases/",
             "maven" at "http://repo1.maven.org/maven2/",
-            "freemarker" at "http://freemarker.sourceforge.net/maven2/",
-            "sbt-idea-repo" at "http://mpeltonen.github.com/maven/"
+            "freemarker" at "http://freemarker.sourceforge.net/maven2/"
         )
     }) ++ Seq("local" at ("file:" + System.getProperty("user.home") + "/.m2/repository/"))
 }
@@ -25,7 +24,5 @@ libraryDependencies ++= Seq(
     "net.lag" % "configgy" % "2.0.0" intransitive(),
     "org.scalatest" % "scalatest" % "1.3"
 )
-
-addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.0.0")
 
 mainClass in (Compile, run) := Some("jm.migrator.Launcher")
