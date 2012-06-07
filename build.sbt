@@ -26,4 +26,6 @@ libraryDependencies ++= Seq(
     "org.scalatest" % "scalatest" % "1.3"
 )
 
+addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.0.0")
+
 mainClass in (Compile, run) := Some("jm.migrator.Launcher")
